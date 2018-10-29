@@ -72,6 +72,13 @@ def post_results(data, devnull):
     print_(response.text)
 
 
+def save_results(data, devnull):
+    file = 'result.txt'
+    fb = open(file, 'w')
+    fb.write(data)
+    fb.close()
+
+
 def get_geo_info():
     """Return geo location information."""
     print_(c.GREEN + 'Retrieving server location... ' + c.RESET)

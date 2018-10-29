@@ -52,7 +52,8 @@ if __name__ == '__main__':
         if payload.get('benchmarks', None):
             print_(c.GREEN + c.BOLD)
             print_("All done! Submitting the results..." + c.RESET)
-            post_results(payload, devnull)
+            ## post_results(payload, devnull)
+            save_results(payload, devnull)
     finally:
         devnull.close()
         os.chdir(cwd)
