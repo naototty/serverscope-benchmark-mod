@@ -4,6 +4,7 @@ import sys
 import subprocess
 import signal
 import locale
+import yaml
 
 from six import print_
 from six.moves import urllib
@@ -75,7 +76,7 @@ def post_results(data, devnull):
 def save_results(data, devnull):
     file = 'result.txt'
     fb = open(file, 'w')
-    fb.write(data)
+    fb.write(yaml.dump(data))
     fb.close()
 
 

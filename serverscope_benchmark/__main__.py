@@ -11,7 +11,7 @@ import shutil
 
 from .cli import get_parser
 from .benchmarks import get_selected_benchmark_classes
-from .utils import Color as c, get_geo_info, post_results
+from .utils import Color as c, get_geo_info, post_results, save_results
 from .server import get_server_specs
 
 from six import print_
